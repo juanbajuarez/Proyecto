@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TECHMAKERS | Paquetes Web y Software</title>
+
+  <!-- Fuentes e íconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Header principal fijo con menú de navegación y botón hamburguesa para dispositivos móviles -->
+  <header class="main-header">
+    <div class="container">
+      <h1>TECHMAKERS</h1>
+      <nav>
+        <ul class="nav-list" id="navList">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#paquetes">Paquetes Web</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle" aria-label="Abrir menú" tabindex="0">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sección Hero: Carrusel principal con mensajes destacados y botones para navegación manual -->
+    <section class="hero" data-aos="fade-in">
+      <div class="container">
+        <div class="hero-carousel">
+          <div class="slide active">
+            <h1>Soluciones digitales a tu medida</h1>
+            <p>Desarrollamos sitios web modernos y software personalizado para tu negocio.</p>
+            <img
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+              alt="Imagen hero"
+            />
+          </div>
+          <div class="slide">
+            <h1>Impulsa tu presencia online</h1>
+            <p>Con estrategias innovadoras y tecnología avanzada.</p>
+            <img
+              src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+              alt="Presencia online"
+            />
+          </div>
+          <div class="slide">
+            <h1>Crece con software a medida</h1>
+            <p>Soluciones personalizadas para las necesidades de tu negocio.</p>
+            <img
+              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
+              alt="Software personalizado"
+            />
+          </div>
+        </div>
+        <!-- Botones para control manual del carrusel -->
+        <button class="carousel-prev" aria-label="Anterior">&#10094;</button>
+        <button class="carousel-next" aria-label="Siguiente">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Sección Servicios: Lista de servicios ofrecidos por TECHMAKERS con iconos y descripciones -->
+    <section class="bloque" id="servicios" data-aos="fade-up" style="position: relative;">
+      <div class="container">
+        <h2>Servicios</h2>
+
+        <div class="carousel-servicios">
+          <div class="servicio-card">
+            <div class="servicio-header">Diseño web personalizado</div>
+            <div class="servicio-descripcion">Creamos sitios web a medida que reflejan la identidad y valores de tu marca.</div>
+          </div>
+          <div class="servicio-card">
+            <div class="servicio-header">Desarrollo de aplicaciones</div>
+            <div class="servicio-descripcion">Aplicaciones móviles y web optimizadas para diferentes plataformas y dispositivos.</div>
+          </div>
+          <div class="servicio-card">
+            <div class="servicio-header">Marketing digital</div>
+            <div class="servicio-descripcion">Estrategias de SEO, SEM y redes sociales para aumentar tu presencia online.</div>
+          </div>
+          <div class="servicio-card">
+            <div class="servicio-header">Soporte y mantenimiento</div>
+            <div class="servicio-descripcion">Asistencia técnica continua para mantener tu sitio web siempre actualizado y seguro.</div>
+          </div>
+          <div class="servicio-card">
+            <div class="servicio-header">Consultoría IT</div>
+            <div class="servicio-descripcion">Análisis y planificación tecnológica para mejorar la eficiencia de tu negocio.</div>
+          </div>
+          <div class="servicio-card">
+            <div class="servicio-header">Hosting y dominios</div>
+            <div class="servicio-descripcion">Soluciones de alojamiento web seguras y registro de dominios personalizados.</div>
+          </div>
+          <div class="servicio-card">
+            <div class="servicio-header">Integración de sistemas</div>
+            <div class="servicio-descripcion">Conectamos tus plataformas para un flujo de trabajo más ágil y eficiente.</div>
+          </div>
+          <div class="servicio-card">
+            <div class="servicio-header">Capacitación y soporte</div>
+            <div class="servicio-descripcion">Entrenamiento para tu equipo y soporte técnico especializado.</div>
+          </div>
+        </div>
+
+        <button class="carousel-btn left" id="servicioPrev" aria-label="Anterior">&#10094;</button>
+        <button class="carousel-btn right" id="servicioNext" aria-label="Siguiente">&#10095;</button>
+      </div>
+    </section>
+
+
+    <!-- Sección Paquetes Web: Presentación de tres paquetes diferentes con características detalladas -->
+    <section class="bloque paquetes" id="paquetes" data-aos="fade-up">
+      <h2>Paquetes Web</h2>
+      <div class="paquetes-container">
+        <!-- Paquete Básico -->
+        <div class="paquete-card" data-aos="fade-up" data-aos-delay="100">
+          <h3>Paquete Básico</h3>
+          <ul>
+            <li>🔒 Certificado de seguridad SSL</li>
+            <li>🌍 1 idioma</li>
+            <li>🎯 Títulos llamativos</li>
+            <li>📞 Botón de WhatsApp</li>
+            <li>📱 Adaptable a celulares/tabletas</li>
+            <li>📦 Hosting incluido</li>
+            <li>📸 Galería de 20 imágenes</li>
+            <li>🎨 Animaciones de elementos</li>
+            <li>📋 Descripciones de tu negocio</li>
+          </ul>
+        </div>
+
+        <!-- Paquete Estándar (destacado) -->
+        <div class="paquete-card destacado" data-aos="fade-up" data-aos-delay="200">
+          <h3>Paquete Estándar</h3>
+          <ul>
+            <li>🔒 Certificado de seguridad SSL</li>
+            <li>🌍 1 idioma</li>
+            <li>🎯 Títulos llamativos</li>
+            <li>📞 Botón de WhatsApp</li>
+            <li>📱 Adaptable a celulares/tabletas</li>
+            <li>🖊️ Fácil de hacer cambios</li>
+            <li>📦 Hosting incluido</li>
+            <li>📸 Galería de 40 imágenes</li>
+            <li>🎨 Animaciones de elementos</li>
+            <li>📋 Descripciones de tu negocio</li>
+            <li>📬 Formulario de contacto</li>
+          </ul>
+        </div>
+
+        <!-- Paquete Premium -->
+        <div class="paquete-card" data-aos="fade-up" data-aos-delay="300">
+          <h3>Paquete Premium</h3>
+          <ul>
+            <li>🔒 Certificado de seguridad SSL</li>
+            <li>🌍 1 idioma</li>
+            <li>🎯 Títulos llamativos</li>
+            <li>📞 Botón de WhatsApp</li>
+            <li>📱 Adaptable a celulares/tabletas</li>
+            <li>🖊️ Fácil de hacer cambios</li>
+            <li>📦 Hosting incluido</li>
+            <li>📸 Galería de 40 imágenes</li>
+            <li>🎨 Animaciones de elementos</li>
+            <li>📋 Descripciones de tu negocio</li>
+            <li>📬 Formulario de contacto</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Paquetes de Software: Presenta cuatro opciones de compra con descripciones detalladas -->
+    <section class="bloque" id="software" data-aos="fade-up">
+      <div class="container">
+        <h2>Paquetes de Software</h2>
+        <div class="software-grid">
+
+          <!-- Opción 1: Solo Software -->
+          <div class="software-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>💾 Software</h3>
+            <p>Adquiere solo el software con un pago único y nosotros lo instalamos directamente en tu propia computadora.</p>
+            <ul>
+              <li>✅ Licencia vitalicia</li>
+              <li>🖥️ Instalado en tu equipo personal</li>
+              <li>🔧 100% Personalizable</li>
+              <li>💡 Añade módulos extra cuando lo necesites</li>
+              <li>💸 Sin mensualidades ni renovaciones</li>
+              <li>📲 Soporte directo y personalizado</li>
+              <li>✨ Más personalización = más valor</li>
+              <li>✅ ¿Algo específico? ¡Lo adaptamos!</li>
+            </ul>
+          </div>
+
+          <!-- Opción 2: Software + Nube -->
+          <div class="software-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>💾 ☁️ Software + Nube</h3>
+            <p>Accede al sistema desde cualquier dispositivo con conexión a internet.</p>
+            <ul>
+              <li>🔐 Seguridad total</li>
+              <li>📱 Acceso 24/7 desde cualquier lugar</li>
+              <li>🧩 Sin instalación adicional</li>
+              <li>💻 Compatible con tus dispositivos actuales</li>
+              <li>💸 Modelo de suscripción mensual</li>
+              <li>🚀 Ideal para negocios en crecimiento</li>
+              <li>⚙️ Funcionalidad completa desde el inicio</li>
+            </ul>
+          </div>
+
+          <!-- Opción 3: Software + Computadora -->
+          <div class="software-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>🖥️ Software + Computadora</h3>
+            <p>Llévate el software preinstalado en un equipo listo para trabajar.</p>
+            <ul>
+              <li>📦 Incluye licencia vitalicia</li>
+              <li>🖥️ Equipos de distintas marcas y modelos</li>
+              <li>🛠️ Adaptación a tus necesidades</li>
+              <li>✅ Control total y sin suscripciones</li>
+              <li>🎯 Inversión única y rentable</li>
+              <li>🚚 Entrega lista para usarse</li>
+              <li>📈 Crece a tu ritmo con opciones adicionales</li>
+            </ul>
+          </div>
+
+          <!-- Opción 4: Software + Accesorios + Computadora -->
+          <div class="software-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>🎯 Software + Accesorios + Computadora</h3>
+            <p>Kit integral con todo lo que necesitas para tu punto de venta.</p>
+            <ul>
+              <li>💻 Software especializado</li>
+              <li>🖥️ Computadora incluida</li>
+              <li>🧾 Accesorios (lectores, impresoras, etc.)</li>
+              <li>📦 100% personalizable</li>
+              <li>📊 Precio depende de:</li>
+              <ul>
+                <li>📌 Tipo de software y módulos</li>
+                <li>🖥️ Modelo del equipo</li>
+                <li>🔌 Marca y tipo de accesorios</li>
+              </ul>
+              <li>💸 Descuentos exclusivos por paquete completo</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Clientes: Logos de empresas o clientes que han confiado en TECHMAKERS -->
+    <section class="bloque" id="clientes" data-aos="fade-up">
+      <div class="container">
+        <h2>🧑‍💼 Nuestros Clientes</h2>
+        <p>Confiaron en nosotros para llevar su presencia digital al siguiente nivel.</p>
+        <div class="clientes-grid">
+          <div class="cliente-logo" data-aos="fade-up" data-aos-delay="100">
+            <img src="ruta-del-logo1.png" alt="Cliente 1" />
+          </div>
+          <div class="cliente-logo" data-aos="fade-up" data-aos-delay="200">
+            <img src="ruta-del-logo2.png" alt="Cliente 2" />
+          </div>
+          <div class="cliente-logo" data-aos="fade-up" data-aos-delay="300">
+            <img src="ruta-del-logo3.png" alt="Cliente 3" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Páginas de Muestra: Galería de sitios web desarrollados para mostrar trabajos anteriores -->
+    <section class="bloque" id="muestras" data-aos="fade-up">
+      <div class="container">
+        <h2>🌐 Páginas de Muestra</h2>
+        <p>Explora algunos de los diseños web que hemos desarrollado recientemente.</p>
+        <div class="muestras-grid">
+          <div class="muestra" data-aos="fade-up" data-aos-delay="100">
+            <img src="ruta-imagen1.jpg" alt="Sitio 1" />
+            <p><a href="https://ejemplo1.com" target="_blank">Ver sitio</a></p>
+          </div>
+          <div class="muestra" data-aos="fade-up" data-aos-delay="200">
+            <img src="ruta-imagen2.jpg" alt="Sitio 2" />
+            <p><a href="https://ejemplo2.com" target="_blank">Ver sitio</a></p>
+          </div>
+          <div class="muestra" data-aos="fade-up" data-aos-delay="300">
+            <img src="ruta-imagen3.jpg" alt="Sitio 3" />
+            <p><a href="https://ejemplo3.com" target="_blank">Ver sitio</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Software a Medida: Oferta de desarrollo personalizado para procesos específicos del cliente -->
+    <section class="bloque" id="software-medida" data-aos="fade-up">
+      <div class="container">
+        <h2>⚙️ Software a Medida</h2>
+        <p>¿Tienes un proceso único en tu negocio? Creamos sistemas personalizados para resolver tus necesidades específicas.</p>
+        <ul>
+          <li>🛠️ Diseñado 100% desde cero para ti</li>
+          <li>📊 Adaptado a tus procesos y flujo de trabajo</li>
+          <li>🔒 Seguro, confiable y escalable</li>
+          <li>🚀 Ideal para empresas con procesos únicos</li>
+          <li>📈 Acompañamiento completo en la planeación, desarrollo e implementación</li>
+        </ul>
+        <p><strong>💬 Contáctanos para una cotización y diagnóstico sin compromiso.</strong></p>
+      </div>
+    </section>
+
+    <!-- Sección Equipo: Presenta los miembros principales del equipo TECHMAKERS -->
+    <section class="bloque" id="team" data-aos="fade-up">
+      <div class="container">
+        <h2>👥 Nuestro Equipo</h2>
+        <p>Conoce a las personas que hacen posible TECHMAKERS.</p>
+        <div class="team-grid">
+          <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+            <img src="ruta-foto1.jpg" alt="Imagen de Iván Ramírez" />
+            <h3>Iván Ramírez</h3>
+            <p>Desarrollador Web Senior.</p>
+          </div>
+          <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+            <img src="ruta-foto2.jpg" alt="Imagen de Willy" />
+            <h3>Willy</h3>
+            <p>Desarrollador Web Senior.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Contacto: Formulario para que los usuarios envíen mensajes o consultas -->
+    <section class="bloque" id="contacto" data-aos="fade-up">
+      <div class="container">
+        <h2>Contacto</h2>
+          <div class="contact-info">
+            <p><strong>Correo:</strong> techsmakers@gmail.com</p>
+            <p><strong>Teléfono:</strong> +52 951 123 45 67</p>
+            <p><strong>Redes Sociales:</strong>
+              <a href="https://facebook.com/techsmakers" target="_blank" rel="noopener noreferrer">Facebook</a> |
+              <a href="https://twitter.com/techsmakers" target="_blank" rel="noopener noreferrer">Twitter</a> |
+              <a href="https://instagram.com/techsmakers" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </p>
+          </div>
+        <form>
+          <input type="text" placeholder="Nombre" required />
+          <input type="email" placeholder="Correo" required />
+          <textarea placeholder="Mensaje" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+        <!-- Mapa restaurado -->
+        <div class="mapa-container">
+           <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.250176951468!2d-97.80691422408317!3d17.826903389993504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c8aa69829c48a1%3A0xe6dce51a9e6a1ad7!2sUniversidad%20Tecnol%C3%B3gica%20de%20la%20Mixteca%20UTM!5e0!3m2!1ses!2smx!4v1753315100297!5m2!1ses!2smx"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer: Información legal y derechos reservados -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 TECHMAKERS. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts externos y scripts personalizados -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="funcionalidad.js"></script>
+  <script>
+    // Inicializa AOS (animaciones al hacer scroll)
+    AOS.init({
+      duration: 800,
+      once: true,
+    }); 
+  </script>
+</body>
+
+</html>
