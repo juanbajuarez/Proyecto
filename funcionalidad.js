@@ -1,36 +1,37 @@
-// Espera a que todo el DOM esté cargado
 document.addEventListener('DOMContentLoaded', () => {
-
-  // --- Menú hamburguesa y toggle de navegación ---
+  // ----------------------------
+  // Menú hamburguesa responsive
+  // ----------------------------
   const menuToggle = document.getElementById('menuToggle');
   const navList = document.getElementById('navList');
 
-  menuToggle.addEventListener('click', () => {
-    navList.classList.toggle('active'); // Mostrar u ocultar menú en móvil
+  menuToggle?.addEventListener('click', () => {
+    navList.classList.toggle('active');
   });
 
-  // Cerrar menú al hacer clic en un enlace
-  navList.querySelectorAll('a').forEach(link => {
+  navList?.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navList.classList.remove('active');
     });
   });
 
-  // --- Toggle descripción servicios ---
+  // ----------------------------
+  // Toggle descripción servicios
+  // ----------------------------
   const servicios = document.querySelectorAll('.servicio-card');
-
   servicios.forEach(servicio => {
     servicio.addEventListener('click', () => {
       servicio.classList.toggle('activo');
     });
   });
 
-  // --- Carrusel Hero ---
+  // ----------------------------
+  // Carrusel Hero (slides)
+  // ----------------------------
   const slides = document.querySelectorAll('.slide');
   const prevBtn = document.querySelector('.carousel-prev');
   const nextBtn = document.querySelector('.carousel-next');
   let currentIndex = 0;
-  let slideInterval;
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
@@ -38,42 +39,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    showSlide(currentIndex);
-  }
-
-  function prevSlide() {
+  prevBtn?.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + slides.length) % slides.length;
     showSlide(currentIndex);
-  }
-
-  // Botones manuales
-  nextBtn.addEventListener('click', () => {
-    nextSlide();
-    resetInterval();
   });
 
-  prevBtn.addEventListener('click', () => {
-    prevSlide();
-    resetInterval();
+  nextBtn?.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
   });
 
-  // Autoplay
-  function startInterval() {
-    slideInterval = setInterval(nextSlide, 5000);
-  }
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }, 5000);
 
-  function resetInterval() {
-    clearInterval(slideInterval);
-    startInterval();
-  }
-
-  // Inicializa carrusel
   showSlide(currentIndex);
-  startInterval();
 
-  // --- Cambio de estilo header al hacer scroll ---
+  // ----------------------------
+  // Cambio de estilo en header sticky
+  // ----------------------------
   const header = document.querySelector('.main-header');
 
   function checkScroll() {
@@ -85,6 +70,42 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.addEventListener('scroll', checkScroll);
-  checkScroll();
 
+  // ----------------------------
+  // Carrusel de Servicios (scroll infinito + pausa en hover)
+  // ----------------------------
+  const carousel = document.getElementById('carouselServicios');
+  const wrapper = document.getElementById('serviciosWrapper');
+
+  // Duplicar contenido para efecto de scroll infinito (solo una vez)
+  if (wrapper && wrapper.children.length > 0) {
+    wrapper.innerHTML += wrapper.innerHTML;
+  }
+
+  let scrollSpeed = 2;
+  let scrollInterval;
+
+  function startAutoScroll() {
+    scrollInterval = setInterval(() => {
+      if (carousel.scrollLeft >= wrapper.scrollWidth / 2) {
+        carousel.scrollLeft = 0;
+      } else {
+        carousel.scrollLeft += scrollSpeed;
+      }
+    }, 16); // ~60 FPS
+  }
+
+  function stopAutoScroll() {
+    clearInterval(scrollInterval);
+  }
+
+  // Iniciar scroll automático
+  startAutoScroll();
+
+  // Pausar scroll al hacer hover en cualquier tarjeta
+  const servicioCards = document.querySelectorAll('.servicio-card');
+  servicioCards.forEach(card => {
+    card.addEventListener('mouseenter', stopAutoScroll);
+    card.addEventListener('mouseleave', startAutoScroll);
+  });
 });

@@ -15,21 +15,27 @@
 
 <body>
   <!-- Header principal fijo con menú de navegación y botón hamburguesa para dispositivos móviles -->
-  <header class="main-header">
-    <div class="container">
-      <h1>TECHMAKERS</h1>
-      <nav>
-        <ul class="nav-list" id="navList">
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#paquetes">Paquetes Web</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-        <div class="menu-toggle" id="menuToggle" aria-label="Abrir menú" tabindex="0">
-          <i class="fas fa-bars"></i>
+   <header class="main-header">
+      <div class="container">
+        <div class="logo-title-wrapper">
+         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png" alt="Techmakers Logo" class="logo" />
+        <h1>TECHMAKERS</h1>
         </div>
-      </nav>
-    </div>
-  </header>
+        <nav>
+          <ul class="nav-list" id="navList">
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#paquetes">Paquetes Web</a></li>
+            <li><a href="#software">Paquetes Software</a></li> 
+            <li><a href="#software-medida">Software a Medida</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+          <div class="menu-toggle" id="menuToggle" aria-label="Abrir menú" tabindex="0">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+
 
   <main>
     <!-- Sección Hero: Carrusel principal con mensajes destacados y botones para navegación manual -->
@@ -61,57 +67,133 @@
             />
           </div>
         </div>
-        <!-- Botones para control manual del carrusel -->
-        <button class="carousel-prev" aria-label="Anterior">&#10094;</button>
-        <button class="carousel-next" aria-label="Siguiente">&#10095;</button>
       </div>
     </section>
 
     <!-- Sección Servicios: Lista de servicios ofrecidos por TECHMAKERS con iconos y descripciones -->
-    <section class="bloque" id="servicios" data-aos="fade-up" style="position: relative;">
+    <section class="bloque" id="servicios">
       <div class="container">
         <h2>Servicios</h2>
 
-        <div class="carousel-servicios">
-          <div class="servicio-card">
-            <div class="servicio-header">Diseño web personalizado</div>
-            <div class="servicio-descripcion">Creamos sitios web a medida que reflejan la identidad y valores de tu marca.</div>
-          </div>
-          <div class="servicio-card">
-            <div class="servicio-header">Desarrollo de aplicaciones</div>
-            <div class="servicio-descripcion">Aplicaciones móviles y web optimizadas para diferentes plataformas y dispositivos.</div>
-          </div>
-          <div class="servicio-card">
-            <div class="servicio-header">Marketing digital</div>
-            <div class="servicio-descripcion">Estrategias de SEO, SEM y redes sociales para aumentar tu presencia online.</div>
-          </div>
-          <div class="servicio-card">
-            <div class="servicio-header">Soporte y mantenimiento</div>
-            <div class="servicio-descripcion">Asistencia técnica continua para mantener tu sitio web siempre actualizado y seguro.</div>
-          </div>
-          <div class="servicio-card">
-            <div class="servicio-header">Consultoría IT</div>
-            <div class="servicio-descripcion">Análisis y planificación tecnológica para mejorar la eficiencia de tu negocio.</div>
-          </div>
-          <div class="servicio-card">
-            <div class="servicio-header">Hosting y dominios</div>
-            <div class="servicio-descripcion">Soluciones de alojamiento web seguras y registro de dominios personalizados.</div>
-          </div>
-          <div class="servicio-card">
-            <div class="servicio-header">Integración de sistemas</div>
-            <div class="servicio-descripcion">Conectamos tus plataformas para un flujo de trabajo más ágil y eficiente.</div>
-          </div>
-          <div class="servicio-card">
-            <div class="servicio-header">Capacitación y soporte</div>
-            <div class="servicio-descripcion">Entrenamiento para tu equipo y soporte técnico especializado.</div>
+        <div class="carousel-servicios" id="carouselServicios">
+          <div class="servicios-wrapper" id="serviciosWrapper">
+            <div class="servicio-card">
+              <div class="servicio-header">Diseño web personalizado</div>
+              <div class="servicio-descripcion">
+                Creamos sitios web totalmente adaptados a las necesidades de tu negocio, con un diseño moderno, funcional y centrado en la experiencia del usuario. Nuestro enfoque garantiza que tu marca tenga una presencia digital única y profesional.
+              </div>
+            </div>
+
+            <div class="servicio-card">
+              <div class="servicio-header">Desarrollo de aplicaciones</div>
+              <div class="servicio-descripcion">
+                Desarrollamos aplicaciones móviles y web con alto rendimiento, adaptables a diferentes plataformas y dispositivos. Utilizamos tecnologías modernas para ofrecer soluciones rápidas, seguras y escalables para cualquier industria.
+              </div>
+            </div>
+
+            <div class="servicio-card">
+              <div class="servicio-header">Marketing digital</div>
+              <div class="servicio-descripcion">
+                Ejecutamos estrategias efectivas de SEO, campañas publicitarias en buscadores y redes sociales, email marketing y más. Te ayudamos a captar más clientes y mejorar tu posicionamiento en internet de forma medible.
+              </div>
+            </div>
+
+            <div class="servicio-card">
+              <div class="servicio-header">Soporte y mantenimiento</div>
+              <div class="servicio-descripcion">
+                Ofrecemos mantenimiento técnico continuo para asegurar que tu sitio o aplicación funcione sin problemas. Nos encargamos de actualizaciones, copias de seguridad, seguridad y resolución de errores técnicos.
+              </div>
+            </div>
+
+            <div class="servicio-card">
+              <div class="servicio-header">Consultoría IT</div>
+              <div class="servicio-descripcion">
+                Brindamos asesoramiento experto en tecnología para ayudarte a tomar decisiones informadas sobre infraestructura, software, ciberseguridad y más. Optimizamos tus recursos tecnológicos para un mejor rendimiento empresarial.
+              </div>
+            </div>
+
+            <div class="servicio-card">
+              <div class="servicio-header">Hosting y dominios</div>
+              <div class="servicio-descripcion">
+                Te ofrecemos planes de hosting seguros, rápidos y confiables, además de gestionar el registro y renovación de tus dominios. Todo con soporte técnico incluido y disponibilidad garantizada para tu sitio web.
+              </div>
+            </div>
+
+            <div class="servicio-card">
+              <div class="servicio-header">Integración de sistemas</div>
+              <div class="servicio-descripcion">
+                Unificamos tus diferentes plataformas (ERP, CRM, tiendas online, etc.) para mejorar la productividad, automatizar procesos y reducir errores humanos. Logramos que todos tus sistemas trabajen en conjunto.
+              </div>
+            </div>
+
+            <div class="servicio-card">
+              <div class="servicio-header">Capacitación y soporte</div>
+              <div class="servicio-descripcion">
+                Impartimos talleres y entrenamientos personalizados a tu equipo para aprovechar al máximo las herramientas tecnológicas. Además, brindamos soporte técnico especializado para resolver dudas o incidencias.
+              </div>
+            </div>
+
+            <!-- DUPLICADO PARA LOOP INFINITO -->
+            
+            <div class="servicio-card">
+              <div class="servicio-header">Diseño web personalizado</div>
+              <div class="servicio-descripcion">
+                Creamos sitios web totalmente adaptados a las necesidades de tu negocio, con un diseño moderno, funcional y centrado en la experiencia del usuario. Nuestro enfoque garantiza que tu marca tenga una presencia digital única y profesional.
+              </div>
+            </div>
+
+            <div class="servicio-card">
+              <div class="servicio-header">Desarrollo de aplicaciones</div>
+              <div class="servicio-descripcion">
+                Desarrollamos aplicaciones móviles y web con alto rendimiento, adaptables a diferentes plataformas y dispositivos. Utilizamos tecnologías modernas para ofrecer soluciones rápidas, seguras y escalables para cualquier industria.
+              </div>
+            </div>
+
+            <div class="servicio-card">
+              <div class="servicio-header">Marketing digital</div>
+              <div class="servicio-descripcion">
+                Ejecutamos estrategias efectivas de SEO, campañas publicitarias en buscadores y redes sociales, email marketing y más. Te ayudamos a captar más clientes y mejorar tu posicionamiento en internet de forma medible.
+              </div>
+            </div>
+
+            <div class="servicio-card">
+              <div class="servicio-header">Soporte y mantenimiento</div>
+              <div class="servicio-descripcion">
+                Ofrecemos mantenimiento técnico continuo para asegurar que tu sitio o aplicación funcione sin problemas. Nos encargamos de actualizaciones, copias de seguridad, seguridad y resolución de errores técnicos.
+              </div>
+            </div>
+
+            <div class="servicio-card">
+              <div class="servicio-header">Consultoría IT</div>
+              <div class="servicio-descripcion">
+                Brindamos asesoramiento experto en tecnología para ayudarte a tomar decisiones informadas sobre infraestructura, software, ciberseguridad y más. Optimizamos tus recursos tecnológicos para un mejor rendimiento empresarial.
+              </div>
+            </div>
+
+            <div class="servicio-card">
+              <div class="servicio-header">Hosting y dominios</div>
+              <div class="servicio-descripcion">
+                Te ofrecemos planes de hosting seguros, rápidos y confiables, además de gestionar el registro y renovación de tus dominios. Todo con soporte técnico incluido y disponibilidad garantizada para tu sitio web.
+              </div>
+            </div>
+
+            <div class="servicio-card">
+              <div class="servicio-header">Integración de sistemas</div>
+              <div class="servicio-descripcion">
+                Unificamos tus diferentes plataformas (ERP, CRM, tiendas online, etc.) para mejorar la productividad, automatizar procesos y reducir errores humanos. Logramos que todos tus sistemas trabajen en conjunto.
+              </div>
+            </div>
+
+            <div class="servicio-card">
+              <div class="servicio-header">Capacitación y soporte</div>
+              <div class="servicio-descripcion">
+                Impartimos talleres y entrenamientos personalizados a tu equipo para aprovechar al máximo las herramientas tecnológicas. Además, brindamos soporte técnico especializado para resolver dudas o incidencias.
+              </div>
+            </div>
           </div>
         </div>
-
-        <button class="carousel-btn left" id="servicioPrev" aria-label="Anterior">&#10094;</button>
-        <button class="carousel-btn right" id="servicioNext" aria-label="Siguiente">&#10095;</button>
       </div>
     </section>
-
 
     <!-- Sección Paquetes Web: Presentación de tres paquetes diferentes con características detalladas -->
     <section class="bloque paquetes" id="paquetes" data-aos="fade-up">
@@ -246,6 +328,22 @@
       </div>
     </section>
 
+    <!-- Sección Software a Medida: Oferta de desarrollo personalizado para procesos específicos del cliente -->
+    <section class="bloque" id="software-medida" data-aos="fade-up">
+      <div class="container">
+        <h2>⚙️ Software a Medida</h2>
+        <p>¿Tienes un proceso único en tu negocio? Creamos sistemas personalizados para resolver tus necesidades específicas.</p>
+        <ul>
+          <li>🛠️ Diseñado 100% desde cero para ti</li>
+          <li>📊 Adaptado a tus procesos y flujo de trabajo</li>
+          <li>🔒 Seguro, confiable y escalable</li>
+          <li>🚀 Ideal para empresas con procesos únicos</li>
+          <li>📈 Acompañamiento completo en la planeación, desarrollo e implementación</li>
+        </ul>
+        <p><strong>💬 Contáctanos para una cotización y diagnóstico sin compromiso.</strong></p>
+      </div>
+    </section>
+
     <!-- Sección Clientes: Logos de empresas o clientes que han confiado en TECHMAKERS -->
     <section class="bloque" id="clientes" data-aos="fade-up">
       <div class="container">
@@ -284,22 +382,6 @@
             <p><a href="https://ejemplo3.com" target="_blank">Ver sitio</a></p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Sección Software a Medida: Oferta de desarrollo personalizado para procesos específicos del cliente -->
-    <section class="bloque" id="software-medida" data-aos="fade-up">
-      <div class="container">
-        <h2>⚙️ Software a Medida</h2>
-        <p>¿Tienes un proceso único en tu negocio? Creamos sistemas personalizados para resolver tus necesidades específicas.</p>
-        <ul>
-          <li>🛠️ Diseñado 100% desde cero para ti</li>
-          <li>📊 Adaptado a tus procesos y flujo de trabajo</li>
-          <li>🔒 Seguro, confiable y escalable</li>
-          <li>🚀 Ideal para empresas con procesos únicos</li>
-          <li>📈 Acompañamiento completo en la planeación, desarrollo e implementación</li>
-        </ul>
-        <p><strong>💬 Contáctanos para una cotización y diagnóstico sin compromiso.</strong></p>
       </div>
     </section>
 
